@@ -1,0 +1,19 @@
+# .github/workflows/main.yml
+
+name: Composite Custom Action
+
+on: 
+  workflow_dispatch
+
+jobs:
+  build:
+    runs-on: PUNITS-LINUX
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3
+    - name: Run composite action
+      uses: ./custom-composite
+      with:
+        name: 'Punit Shah'
+ 
